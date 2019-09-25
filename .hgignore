@@ -1,0 +1,17 @@
+syntax: glob
+api/bi/*.txt
+api/bi/db.php
+.htaccess
+api/fpdf/font/unifont/dejavusanscondensed.mtx.php
+api/fpdf/font/unifont/dejavusanscondensed-bold.mtx.php
+api/uploads/orchestrum/
+api/uploads/users/
+nbproject*
+!api/log/error_log_TEMPLATE
+api/log/*
+*.orig
+api/MyDB.class.php
+api/email/Email_sender.class.php
+.idea/*
+invoices/*
+vendor_invoices/*
