@@ -21,7 +21,6 @@
         <script src="lib/jquery-2.1.3.min.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
         <script src="lib/angular1.3.15.min.js" type="text/javascript"></script>
-        <script src="lib/angular-animate1.3.15.min.js" type="text/javascript"></script>
         <script src="lib/angular-sanitize1.3.15.min.js" type="text/javascript"></script>
         <script src="lib/angular-ui-router-0.2.13.js" type="text/javascript"></script>
         <script src="lib/dx16.1.5/Lib/js/jszip.js" type="text/javascript"></script>
