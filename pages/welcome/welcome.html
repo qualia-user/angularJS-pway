@@ -1,1 +1,23 @@
-{{localstring}}
+<h2>Users</h2>
+
+
+<div ng-controller="ctrl_welcome as welcome">
+    <ul class="tutorials">
+        <li  data-ng-repeat="user in welcome.users_vm track by $index" >
+            <div class="number">#{{$index + 1}}</div>
+            <h3>{{user.id}}</h3>
+            <p>{{user.customer_id}}</p>
+        </li>
+    </ul>
+
+
+    <button ng-click="selectUsers()">Get users</button>
+    <li data-ng-repeat="user in users_vm" >
+        {{user.id}}
+        {{user.customer_id}}
+        <div class="item-info">
+            <div class="col-md-2">ID:{{user.id}}</div>
+            <div class="col-md-10">CUSTOMERID:{{user.customer_id}}</div>
+        </div>
+    </li>
+</div>
