@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-<?php $rand = str_pad(mt_rand(0, 9999999), 7, '0', STR_PAD_LEFT); ?>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,7 +9,7 @@
 
         <link rel="shortcut icon" href="favicon.png"  type="image/png"/>
         <link rel="icon" href="favicon.png"  type="image/png"/>
-
+        <link href="res/css/template.css" rel="stylesheet" type="text/css"/>
         <!--        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Oxygen:400,300,700%7CSquada+One' type='text/css' media='all'/>
                 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900'  type='text/css' media='all'>-->
 
