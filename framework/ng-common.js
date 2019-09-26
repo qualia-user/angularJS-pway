@@ -1,6 +1,3 @@
-/**
- * Created by miha on 28.04.15..
- */
 
 app.service('svcTools', function () {
 

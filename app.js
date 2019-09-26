@@ -1,6 +1,4 @@
-/**
- * Created by miha on 01.04.2015 10:30.
- */
+
 var app = angular.module("app", ['ui.router', 'dx']);
 
     app.config(['$httpProvider', function ($httpProvider) {
@@ -36,19 +34,12 @@ var app = angular.module("app", ['ui.router', 'dx']);
             return query.length ? query.substr(0, query.length - 1) : query;
         };
 
-//     Override $http service's default transformRequest
-//    $httpProvider.defaults.transformRequest = [function (data) {
-//        return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
-//    }];
-
     }]);
 
 
 app.controller("mainCtrl", ["$rootScope", "$scope", "$log", '$window',
     function ($rootScope, $scope, $log, $window) {
-
-
         $log.info("Angular application started!");
-        //console.log($localStorage.token);
+
     }
 ]);

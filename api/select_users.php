@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Zugi
- * Date: 25.9.2019.
- * Time: 14:42
- */
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'gpsrawdbp');
 define('DB_USER', 'root');

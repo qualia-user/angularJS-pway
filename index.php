@@ -3,67 +3,45 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--<title>Ciklopea ERP</title>-->
-        <title>Orchestrum</title>
-        <!--        <link rel="shortcut icon" type="image/png" href="res/assets/favicon.ico"/>-->
-
+        <title>Template</title>
         <link rel="shortcut icon" href="favicon.png"  type="image/png"/>
         <link rel="icon" href="favicon.png"  type="image/png"/>
         <link href="res/css/template.css" rel="stylesheet" type="text/css"/>
-        <!--        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Oxygen:400,300,700%7CSquada+One' type='text/css' media='all'/>
-                <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900'  type='text/css' media='all'>-->
 
-        <!--    Styles -->
+        <!-- Styles -->
+        <link href="lib/dx19.1.6/Lib/css/dx.common.css" rel="stylesheet" type="text/css"/>
+        <link href="lib/dx19.1.6/Lib/css/dx.light.compact.css" rel="stylesheet" type="text/css"/>
 
-        <!--    Third Party Libraries -->
-        <script src="lib/jquery-2.1.3.min.js" type="text/javascript"></script>
+        <!-- Third Party Libraries -->
+        <script src="lib/jquery-3.4.1.min.js" type="text/javascript"></script>
         <script src="lib/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-        <script src="lib/angular1.3.15.min.js" type="text/javascript"></script>
-        <script src="lib/angular-sanitize1.3.15.min.js" type="text/javascript"></script>
-        <script src="lib/angular-ui-router-0.2.13.js" type="text/javascript"></script>
-        <script src="lib/dx16.1.5/Lib/js/jszip.js" type="text/javascript"></script>
-        <script src="lib/dx16.1.5/Lib/js/dx.viz-web.js" type="text/javascript"></script>
-        <!--<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/16.2.3/js/dx.viz-web.js"></script>-->
+        <script src="lib/angular1.7.8.min.js" type="text/javascript"></script>
+        <script src="lib/angular-ui-router-1.0.7.min.js" type="text/javascript"></script>
+        <script src="lib/dx19.1.6/Lib/js/jszip.js" type="text/javascript"></script>
+        <script src="lib/dx19.1.6/Lib/js/dx.viz-web.js" type="text/javascript"></script>
 
-        <!--    Angular config -->
+        <!-- Angular config -->
         <script src="app.js" type="text/javascript"></script>
         <script src="routing.js" type="text/javascript"></script>
 
-        <!--    Services -->
-
+        <!-- Services -->
         <script src="services/svc_api.js" type="text/javascript"></script>
 
-        <!--    Q Framework -->
+        <!-- Q Framework -->
         <script src="framework/ng-common.js" type="text/javascript"></script>
 
+        <!-- Directives -->
 
-
-        <!--        DIRECTIVES-->
-
-        <!--    Pages -->
+        <!-- Pages -->
         <script src="pages/welcome/welcome.js" type="text/javascript"></script>
-
-
-
-
-        
     </head>
-
     <body ng-app="app" ng-controller="mainCtrl as main">
 
-        <header ng-if="showHeader" id="app-header">
+        <header>
             <div id="logo-header" ui-sref="welcome"></div>
-
-
-           
-            
         </header>
-
-
 
         <div ui-view class="root-ui-view"></div>
 
-    </div>
-
-</body>
+    </body>
 </html>
