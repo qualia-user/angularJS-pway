@@ -4,6 +4,8 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
         {id: '2', customer_id: 'john.smith@example.org'}
     ];
 
+
+
     $("#selectUsers").dxButton({
         stylingMode: "contained",
         text: "Get users",
