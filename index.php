@@ -31,6 +31,7 @@
         <script src="framework/ng-common.js" type="text/javascript"></script>
 
         <!-- Directives -->
+        <script src="pages/users-list/users_list.js" type="text/javascript"></script>
 
         <!-- Pages -->
         <script src="pages/welcome/welcome.js" type="text/javascript"></script>

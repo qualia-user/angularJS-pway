@@ -1,8 +1,14 @@
-app.service('svcApi', ['$http', function ($http) {
-        this.selectQuery_REPO = function () {
-            console.log('selecting users');
-            return $http.get("api/select_users.php").success(function (data) {
-                console.log('users selected');
-            });
-        };
-    }]);
+app.service('svcApi', ['$http', '$q', function ($http, $q) {
+    this.selectQuery_REPO = function () {
+        var d = $q.defer();
+        $http.get("api/select_users.php").then(success, error);
+
+        function success(response) {
+            d.resolve(response);
+        }
+        function error(error) {
+            d.reject(error);
+        }
+        return d.promise;
+    };
+}]);
