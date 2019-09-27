@@ -20,13 +20,6 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
             }
         }
     });
-
-    $scope.data = {
-        headList: [{ title: 'Ime' }, { title: 'Prezime' }, { title: 'E-mail' }, { title: '' }, { title: '' }],
-        // rowList: [{ name: 'Tomislav' }, { surname: 'Smetko' }, { email: 'tomislav.smetko@qualia.hr' }, { edit: '' }, { delete: '' },
-        //           { name: 'Domagoj' }, { surname: 'Žugec' }, { email: 'domagoj.zugec@qualia.hr' }, { edit: '' }, { delete: '' }]
-
-    }
 }]);
 
 
