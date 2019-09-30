@@ -1,19 +1,17 @@
 app.directive("usersList", function () {
     return {
         controller: function($scope) {
-            $scope.data = {
-                headList: [{ title: 'Ime' }, { title: 'Prezime' }, { title: 'E-mail' }, { title: '' }, { title: '' }],
-                rowList: [{ name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr',  edit: '<div id="editUser"></div>', delete: '<div id="deleteUser"></div>'},
-                    { name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr', edit: '<div id="editUser"></div>', delete: '<div id="deleteUser"></div>' }]
-            }
+
         },
         templateUrl: 'pages/users-list/users_list.html',
         restrict: 'E',
         scope: {
-            'table': '='
+            'tableHead': '=',
+            'tableBody': '=',
+            'tableButtons': '@'
         },
         link: function ($scope, $element, $attrs) {
-            // $scope.showButtons =
+            // table = $scope.data;
 
             $("#true").dxButton({
                 stylingMode: "contained",

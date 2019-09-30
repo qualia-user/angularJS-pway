@@ -4,6 +4,13 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
         {id: '2', customer_id: 'john.smith@example.org'}
     ];
 
+    $scope.data = {
+        headList: [{ title: 'Ime' }, { title: 'Prezime' }, { title: 'E-mail' }, { title: '' }, { title: '' }],
+        rowList: [{ name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
+            { name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}],
+        show: true
+    }
+
 
 
     $("#selectUsers").dxButton({

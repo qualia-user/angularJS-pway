@@ -4,13 +4,18 @@
 
 <table>
     <tr>
-        <th data-ng-repeat="item in data.headList">{{ item.title }}</th>
+        <th data-ng-repeat="item in tableHead.headList">{{item.title}}</th>
     </tr>
-    <tr data-ng-repeat="item in data.rowList">
+    <tr data-ng-repeat="item in tableBody.rowList">
         <td>{{ item.name }}  </td>
         <td>{{ item.surname }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.edit }}</td>
         <td>{{ item.delete }}</td>
+
+        <td ng-show="tableButtons.show"><div id="deleteUser">asad</div></td>
+        <td ng-show="tableButtons.show"><div id="editUser">kjhgkjg</div></td>
+
     </tr>
+
 </table>
