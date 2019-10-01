@@ -4,6 +4,7 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
         {id: '2', customer_id: 'john.smith@example.org'}
     ];
 
+    $scope.headList = [{property_name: 'name', title: 'Ime'}, {property_name: 'surname', title: 'Prezime'}, {property_name: 'email', title: 'E-mail'}];
     $scope.rowList = [
             {name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
             {name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}

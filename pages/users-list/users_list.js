@@ -9,13 +9,18 @@ app.directive("usersList", function () {
             'whenSelect': '&'
         },
         link: function ($scope, $element, $attrs) {
-            if (angular.isDefined($scope.tableBody))
-                $scope.propertyMap = [];
-                for (var x in $scope.tableBody[0]) {
-                    if ($scope.tableBody[0].hasOwnProperty(x)) {
-                        $scope.propertyMap.push(x);
+            if ($scope.tableHead === undefined) {
+                if (angular.isDefined($scope.tableBody)) {
+                    $scope.tableHead = [];
+                    for (var x in $scope.tableBody[0]) {
+                        if ($scope.tableBody[0].hasOwnProperty(x)) {
+                            $scope.tableHead.push({'property_name':x, 'title':x});
+                        }
                     }
                 }
+            }
+
+
 
 
             $scope.editButton = {
