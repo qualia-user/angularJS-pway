@@ -4,16 +4,17 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
         {id: '2', customer_id: 'john.smith@example.org'}
     ];
 
-    $scope.data = {
-        headList: [{ title: 'Ime' }, { title: 'Prezime' }, { title: 'E-mail' }, { title: '' }, { title: '' }],
-        rowList: [{ name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
-            { name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}],
-        show: true
-    }
+    $scope.headList = [{property: 'name', name: 'Ime'}, {property: 'surname', surname: 'Prezime'}, {property: 'email', email: 'E-mail'}, {property: 'button', button: 'Button1'}, {property: 'button', button: 'Button2'}];
+    $scope.rowList = {
+        propertyMap: [{property_name:'name'}, {property_name:'surname'}, {property_name:'email'}],
+        data: [
+            {name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
+            {name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}
+        ]
+    };
+    $scope.boolean = false;
 
-
-
-    $("#selectUsers").dxButton({
+    $scope.selectUsers = {
         stylingMode: "contained",
         text: "Get users",
         type: "normal",
@@ -22,13 +23,14 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
             svcApi.selectQuery_REPO().then(success, error);
 
             function success (response) {
+                console.log(response);
                 $scope.users_vm = response.data;
             }
             function error(err) {
                 console.log(err);
             }
         }
-    });
+    };
 }]);
 
 
