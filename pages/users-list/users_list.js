@@ -20,9 +20,6 @@ app.directive("usersList", function () {
                 }
             }
 
-
-
-
             $scope.editButton = {
                 stylingMode: "contained",
                 text: "Show buttons",
