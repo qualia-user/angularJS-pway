@@ -3,12 +3,12 @@
 
 <table>
     <tr>
-        <th data-ng-repeat="item in tableHead"> {{ item[item.property] }}</th>
+        <th data-ng-repeat="item in propertyMap"> {{ item }}</th>
     </tr>
 
-    <tr data-ng-repeat="data in tableBody.data">
-        <th data-ng-repeat="item in tableBody.propertyMap">
-            {{data[item.property_name]}}
+    <tr data-ng-repeat="data in tableBody">
+        <th data-ng-repeat="item in propertyMap">
+            {{data[item]}}
         </th>
         <th ng-show="tableButtons" dx-button="editButton"></th>
         <th ng-show="tableButtons" dx-button="deleteButton"></th>

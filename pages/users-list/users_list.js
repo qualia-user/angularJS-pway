@@ -9,6 +9,15 @@ app.directive("usersList", function () {
             'whenSelect': '&'
         },
         link: function ($scope, $element, $attrs) {
+            if (angular.isDefined($scope.tableBody))
+                $scope.propertyMap = [];
+                for (var x in $scope.tableBody[0]) {
+                    if ($scope.tableBody[0].hasOwnProperty(x)) {
+                        $scope.propertyMap.push(x);
+                    }
+                }
+
+
             $scope.editButton = {
                 stylingMode: "contained",
                 text: "Show buttons",
@@ -16,13 +25,11 @@ app.directive("usersList", function () {
                 width: 120,
                 onClick: function() {
                     DevExpress.ui.notify("Edit buttons request!");
-
                     $scope.whenSelect({
 
                     });
-
                 }
-            }
+            };
 
             $scope.deleteButton = {
                 stylingMode: "contained",
