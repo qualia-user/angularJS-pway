@@ -6,8 +6,8 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
 
     $scope.headList = [{property_name: 'name', title: 'Ime'}, {property_name: 'surname', title: 'Prezime'}, {property_name: 'email', title: 'E-mail'}];
     $scope.rowList = [
-            {name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
-            {name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}
+            {id: 1, name: 'Tomislav', surname: 'Smetko', email: 'tomislav.smetko@qualia.hr'},
+            {id: 2, name: 'Domagoj', surname: 'Žugec', email: 'domagoj.zugec@qualia.hr'}
         ];
     $scope.boolean = true;
 

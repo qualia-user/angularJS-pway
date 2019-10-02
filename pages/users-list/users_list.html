@@ -4,11 +4,21 @@
         <th data-ng-repeat="item in tableHead"> {{ item.title }}</th>
     </tr>
 
-    <tr data-ng-repeat="data in tableBody">
+    <tr data-ng-repeat="rr in tableBody">
         <th data-ng-repeat="item in tableHead">
-            {{data[item.property_name]}}
+            {{rr[item.property_name]}}
         </th>
         <th ng-show="tableButtons" dx-button="editButton"></th>
         <th ng-show="tableButtons" dx-button="deleteButton"></th>
     </tr>
 </table>
+
+<!--popup tu, u popup će se nalaziti direktiva za editiranje 
+popup se otvara na edit button i direktivi prosljeđuje se objekt koji će se editirati i $scope.tableHead
+
+Property name value 
+npr: 
+
+Ime: 
+Prezime:
+Email: -->

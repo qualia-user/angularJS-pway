@@ -25,7 +25,8 @@ app.directive("usersList", function () {
                 text: "Show buttons",
                 type: "normal",
                 width: 120,
-                onClick: function() {
+                onClick: function(e) {
+                    console.log(e);
                     DevExpress.ui.notify("Edit buttons request!");
                     $scope.whenSelect({
 
