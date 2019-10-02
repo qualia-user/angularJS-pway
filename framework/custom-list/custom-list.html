@@ -4,14 +4,24 @@
         <th data-ng-repeat="item in tableHead"> {{ item.title }}</th>
     </tr>
 
-    <tr data-ng-repeat="rr in tableBody">
+    <tr data-ng-repeat="data in tableBody">
         <th data-ng-repeat="item in tableHead">
-            {{rr[item.property_name]}}
+            {{data[item.property_name]}}
         </th>
         <th ng-show="tableButtons" dx-button="editButton"></th>
         <th ng-show="tableButtons" dx-button="deleteButton"></th>
     </tr>
 </table>
+
+<div class="popup"
+     dx-popup="popupOptions">
+    <div data-options="dxTemplate: { name:'info' }">
+        <edit
+            form-labels="formParts"
+            edit-object="obj">
+        </edit>
+    </div>
+</div>
 
 <!--popup tu, u popup će se nalaziti direktiva za editiranje 
 popup se otvara na edit button i direktivi prosljeđuje se objekt koji će se editirati i $scope.tableHead

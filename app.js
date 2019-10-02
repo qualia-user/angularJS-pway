@@ -40,6 +40,5 @@ var app = angular.module("app", ['ui.router', 'dx']);
 app.controller("mainCtrl", ["$rootScope", "$scope", "$log", '$window',
     function ($rootScope, $scope, $log, $window) {
         $log.info("Angular application started!");
-
     }
 ]);
