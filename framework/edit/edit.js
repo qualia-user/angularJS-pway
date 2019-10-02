@@ -7,8 +7,6 @@ app.directive("edit", function() {
             'editObject': '='
         },
         link: function ($scope, $element, $attrs) {
-            console.log('edit direktiva');
-            // console.log($scope.form, 'form', $scope.editObject, 'editObcject');
         }
     }
 });

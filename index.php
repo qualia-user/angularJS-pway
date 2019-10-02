@@ -30,6 +30,7 @@
         <!-- Q Framework -->
         <script src="framework/ng-common.js" type="text/javascript"></script>
         <script src="framework/custom-list/custom-list.js" type="text/javascript"></script>
+        <script src="framework/edit/edit.js" type="text/javascript"></script>
 
         <!-- Directives -->
 

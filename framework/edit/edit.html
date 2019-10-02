@@ -1,11 +1,5 @@
-<!--<p data-ng-repeat="label in formLabels">-->
-    Ime:
-<!--</p>-->
-<p>
-    Prezime:
-    <span></span>
-</p>
-<p>
-    E-mail:
-    <span></span>
-</p>
+<div class="container">
+    <p data-ng-repeat="label in formLabels">
+        {{label.title}}: <input type="text" value="{{editObject[label.property_name]}}" />
+    </p>
+</div>

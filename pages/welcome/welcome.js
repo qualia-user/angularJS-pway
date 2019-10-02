@@ -20,7 +20,6 @@ app.controller("ctrl_welcome", ['$scope', 'svcApi',  function ($scope, svcApi) {
             svcApi.selectQuery_REPO().then(success, error);
 
             function success (response) {
-                console.log(response);
                 $scope.users_vm = response.data;
             }
             function error(err) {

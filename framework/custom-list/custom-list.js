@@ -30,17 +30,7 @@ app.directive("customList", ['$filter', function ($filter) {
                     var editObject = $filter('filter')($scope.tableBody, {id:e.model.data.id})[0];
                     $scope.visiblePopup = true;
                     $scope.formParts = $scope.tableHead;
-                    $scope.editObject = editObject;
-
-                    // $scope.tableHead
-                    console.log(editObject, 'editObject');
-
-
-
-                    // form = $scope.headList;
-                    // editObject = $filter('filter')($scope.rowList, {id:});
-
-                    console.log(e);
+                    $scope.editObj = editObject;
                     DevExpress.ui.notify("Edit button request!");
 
                 }

@@ -1,4 +1,3 @@
-
 <table>
     <tr>
         <th data-ng-repeat="item in tableHead"> {{ item.title }}</th>
@@ -18,17 +17,7 @@
     <div data-options="dxTemplate: { name:'info' }">
         <edit
             form-labels="formParts"
-            edit-object="obj">
+            edit-object="editObj">
         </edit>
     </div>
 </div>
-
-<!--popup tu, u popup će se nalaziti direktiva za editiranje 
-popup se otvara na edit button i direktivi prosljeđuje se objekt koji će se editirati i $scope.tableHead
-
-Property name value 
-npr: 
-
-Ime: 
-Prezime:
-Email: -->
