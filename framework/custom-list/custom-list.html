@@ -11,13 +11,10 @@
         <th ng-show="tableButtons" dx-button="deleteButton"></th>
     </tr>
 </table>
+<edit
+    form-labels="formParts"
+    edit-object="editObj"
+    visible-popup="visionBoolean"
+    >
+</edit>
 
-<div class="popup"
-     dx-popup="popupOptions">
-    <div data-options="dxTemplate: { name:'info' }">
-        <edit
-            form-labels="formParts"
-            edit-object="editObj">
-        </edit>
-    </div>
-</div>

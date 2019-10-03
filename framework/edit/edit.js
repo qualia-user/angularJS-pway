@@ -4,9 +4,57 @@ app.directive("edit", function() {
         restrict: 'E',
         scope: {
             'formLabels': '=',
-            'editObject': '='
+            'editObject': '=',
+            'visiblePopup': '='
         },
         link: function ($scope, $element, $attrs) {
+            $scope.visiblePopup = false;
+
+            $scope.formInput = {
+                width: 180,
+            };
+
+            $scope.popupOptions = {
+                width: 500,
+                height: 250,
+                contentTemplate: "info",
+                showTitle: true,
+                title: "Edit form",
+                dragEnabled: false,
+                showCloseButton: false,
+                closeOnOutsideClick: false,
+                bindingOptions: {
+                    visible: "visiblePopup",
+                }
+            };
+
+            $scope.saveButton = {
+                stylingMode: "outlined",
+                text: "Save",
+                type: "normal",
+                width: 60,
+                onClick: function() {
+                    DevExpress.ui.notify("Save buttons request");
+                    $scope.visiblePopup = false;
+                },
+                elementAttr: {
+                    id: 'saveButton'
+                }
+            };
+
+            $scope.cancelButton = {
+                stylingMode: "contained",
+                text: "Cancel",
+                type: "danger",
+                width: 60,
+                onClick: function() {
+                    DevExpress.ui.notify("Cancel buttons request");
+                    $scope.visiblePopup = false;
+                },
+                elementAttr: {
+                    id: 'cancelButton'
+                }
+            };
         }
     }
 });

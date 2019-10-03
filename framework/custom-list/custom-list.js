@@ -9,7 +9,6 @@ app.directive("customList", ['$filter', function ($filter) {
             'whenSelect': '&'
         },
         link: function ($scope, $element, $attrs) {console.log('asdasd')
-            $scope.visiblePopup = false;
             if ($scope.tableHead === undefined) {
                 if (angular.isDefined($scope.tableBody)) {
                     $scope.tableHead = [];
@@ -28,24 +27,10 @@ app.directive("customList", ['$filter', function ($filter) {
                 width: 120,
                 onClick: function(e) {
                     var editObject = $filter('filter')($scope.tableBody, {id:e.model.data.id})[0];
-                    $scope.visiblePopup = true;
                     $scope.formParts = $scope.tableHead;
                     $scope.editObj = editObject;
+                    $scope.visionBoolean = true;
                     DevExpress.ui.notify("Edit button request!");
-
-                }
-            };
-
-            $scope.popupOptions = {
-                width: 300,
-                height: 250,
-                contentTemplate: "info",
-                showTitle: true,
-                title: "Edit form",
-                dragEnabled: false,
-                closeOnOutsideClick: true,
-                bindingOptions: {
-                    visible: "visiblePopup",
                 }
             };
 
