@@ -19,3 +19,10 @@ try {
 } catch (PDOException $ex) {
     var_dump($ex);
 }
+// to do: 
+//napraviti php skriptu ili skripte koje će raditi sljedeće
+//1. brisanje korisnika iz baze. Metoda GET, u url-u će se proslijediti id koji će obrisati korisnika
+//2. dohvaćanje korisnika s određenim id-em. Metoda GET, u url-u će se proslijediti id korisniak koji se dohvaća 
+//3. dohvat svih korisnika, metoda GET 
+//4. dodavanje novog korisnika, metoda POST
+//5. update postojećeg korisnika, POST

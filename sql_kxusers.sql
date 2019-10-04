@@ -23,3 +23,16 @@ insert into kxusers (customer_id,role_id,username) VALUES(1,5,"alen@laremial.de"
 insert into kxusers (customer_id,role_id,username) VALUES(1,5,"zugecd@gmail.com");
 
 
+CREATE TABLE `kxusers` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `dob` date NOT NULL,
+  `age` int(11) NOT NULL,
+  `time_modified` datetime NOT NULL,
+  `time_created` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
