@@ -43,11 +43,14 @@ app.directive("edit", function() {
             };
 
             $scope.cancelButton = {
+                useSubmitBehavior: false,
                 stylingMode: "contained",
                 text: "Cancel",
                 type: "danger",
                 width: 60,
                 onClick: function() {
+                    console.log($scope.editForm.inputObject.$rollbackViewValue(), 'editForm');
+                    $scope.editForm.inputObject.$rollbackViewValue();
                     DevExpress.ui.notify("Cancel buttons request");
                     $scope.visiblePopup = false;
                 },
